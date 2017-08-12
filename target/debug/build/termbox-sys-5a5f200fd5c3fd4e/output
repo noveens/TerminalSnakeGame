@@ -1,0 +1,23 @@
+running: "git" "clone" "https://github.com/nsf/termbox" ".termbox"
+waf configure: setting CFLAGS to: `-m64 -fPIC`
+running: "./waf" "configure" "--prefix=/"
+Setting top to                           : /home/thealchemist/.cargo/registry/src/github.com-1ecc6299db9ec823/termbox-sys-0.2.10/.termbox 
+Setting out to                           : /home/thealchemist/.cargo/registry/src/github.com-1ecc6299db9ec823/termbox-sys-0.2.10/.termbox/build 
+Checking for 'gcc' (C compiler)          : /usr/bin/gcc 
+'configure' finished successfully (0.019s)
+running: "./waf" "build" "--targets=termbox_static"
+Waf: Entering directory `/home/thealchemist/.cargo/registry/src/github.com-1ecc6299db9ec823/termbox-sys-0.2.10/.termbox/build'
+[1/3] c: src/termbox.c -> build/src/termbox.c.2.o
+[2/3] c: src/utf8.c -> build/src/utf8.c.2.o
+[3/3] cstlib: build/src/termbox.c.2.o build/src/utf8.c.2.o -> build/src/libtermbox.a
+Waf: Leaving directory `/home/thealchemist/.cargo/registry/src/github.com-1ecc6299db9ec823/termbox-sys-0.2.10/.termbox/build'
+'build' finished successfully (1.433s)
+running: "./waf" "install" "--targets=termbox_static" "--destdir=/home/thealchemist/rust/helloworld/target/debug/build/termbox-sys-5a5f200fd5c3fd4e/out"
+Waf: Entering directory `/home/thealchemist/.cargo/registry/src/github.com-1ecc6299db9ec823/termbox-sys-0.2.10/.termbox/build'
++ install /home/thealchemist/rust/helloworld/target/debug/build/termbox-sys-5a5f200fd5c3fd4e/out/include/termbox.h (from src/termbox.h)
++ install /home/thealchemist/rust/helloworld/target/debug/build/termbox-sys-5a5f200fd5c3fd4e/out/lib/libtermbox.a (from build/src/libtermbox.a)
+Waf: Leaving directory `/home/thealchemist/.cargo/registry/src/github.com-1ecc6299db9ec823/termbox-sys-0.2.10/.termbox/build'
+'install' finished successfully (0.007s)
+running: "rm" "-rf" ".termbox"
+cargo:rustc-link-search=/home/thealchemist/rust/helloworld/target/debug/build/termbox-sys-5a5f200fd5c3fd4e/out/lib
+cargo:rustc-link-lib=static=termbox

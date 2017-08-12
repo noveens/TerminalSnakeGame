@@ -1,0 +1,1 @@
+{"rustc":16218068117412374134,"target":7469090791350189056,"profile":11154289914177168617,"local":{"variant":"Precalculated","fields":["0.2.0"]},"features":"None","deps":[["termbox-sys v0.2.10",11142720644816610259],["try_from v0.2.2",4719778240813194877]],"rustflags":[]}
